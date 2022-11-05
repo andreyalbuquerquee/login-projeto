@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;700&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(159, 159, 159, 0.368627451);
+  background-image: url(../assets/bg.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 20px 104px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+@media (max-width: 800px) {
+  header {
+    justify-content: center;
+  }
+}
+header img {
+  min-width: 44px;
+  height: 58px;
+}
+header nav {
+  display: flex;
+  gap: 15px;
+  background-color: transparent;
+  flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  header nav {
+    display: none;
+  }
+}
+header nav button {
+  min-width: 100px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+header nav button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+header nav button:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0px 50px 22px 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 30px rgba(102, 106, 245, 0.13);
+  border-radius: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container .formContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  gap: 30px;
+  padding-top: 41px;
+}
+.container .formContainer .formTitle {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  color: #7E86F6;
+}
+.container .formContainer .formDescription {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+}
+.container .formContainer .input:focus {
+  outline: 2px solid #9f9f9f;
+  color: #000000;
+}
+.container .formContainer .name-input {
+  height: 50px;
+  width: 430px;
+  background-color: #F5F5FF;
+  font-size: 14;
+  color: #9F9F9F;
+  font-family: "Poppins", sans-serif;
+  font-weight: regular;
+  border: none;
+  padding: 16px 0px 16px 20px;
+}
+.container .formContainer .email-input {
+  height: 50px;
+  width: 430px;
+  background-color: #F5F5FF;
+  font-size: 14;
+  color: #9F9F9F;
+  font-family: "Poppins", sans-serif;
+  font-weight: regular;
+  border: none;
+  padding: 16px 0px 16px 20px;
+}
+.container .formContainer .text-input {
+  height: auto;
+  width: 430px;
+  background-color: #F5F5FF;
+  font-size: 14;
+  color: #9F9F9F;
+  font-family: "Poppins", sans-serif;
+  font-weight: regular;
+  border: none;
+  padding: 16px 0px 16px 20px;
+}
+.container .formContainer .submitButton {
+  height: 50px;
+  width: 430px;
+  background-color: #6569F6;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+.container .formContainer .submitButton:hover {
+  transform: scale(0.98);
+}
+.container .contactContainer {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .container .contactContainer {
+    display: none;
+  }
+}
+.container .contactContainer #contact-art {
+  width: 75%;
+}
+.container .contactContainer .contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  padding-top: 20px;
+}
+.container .contactContainer .contactInfoContainer .contactInfo {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .contactContainer .contactInfoContainer .contactIcon {
+  padding-right: 13px;
+}
+
+@media (max-width: 750px) {
+  .formContainer {
+    width: 100%;
+  }
+  .input {
+    width: 100% !important;
+  }
+  .submitButton {
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
