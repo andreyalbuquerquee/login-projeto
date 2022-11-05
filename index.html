@@ -26,14 +26,14 @@
         </nav>
     </header>
     <div class="container">
-        <div class="formContainer">
+        <form class="formContainer" autocomplete="on">
             <p class="formTitle">Entre Em Contato!</p>
             <p class="formDescription">Estamos aqui por você! Como podemos ajudar?</p>
-            <input class="input name-input" type="text" placeholder="Enter your Name">
-            <input class="input email-input" type="email" placeholder="Enter your email address">
-            <input class="input text-input" type="text" placeholder="Go ahead, we are listening...">
-            <button class="submitButton">Submit</button>
-        </div>
+            <input class="input name-input" type="text" placeholder="Digite Seu Nome" required>
+            <input class="input email-input" type="email" placeholder="Digite Seu Endereço E-mail" required>
+            <input class="input text-input" type="text" placeholder="Informações Adicionais">
+            <input type="submit" value="Enviar" class="submitButton">
+        </form>
         <div class="contactContainer">
             <img  id="contact-art" src="assets/contact.svg" alt="contact-image">
             <div class="contactInfoContainer">
